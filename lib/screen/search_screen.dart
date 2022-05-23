@@ -61,7 +61,7 @@ class Search extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(context,
                             MaterialPageRoute<void>(builder: (BuildContext context) {
-                              return Result();
+                              return Result1();
                             }),);
                         },
                       ),
@@ -77,15 +77,8 @@ class Search extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        child:
-                        Text('최근 검색어'),
-                        margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                      ),
-                      Container(
-                        child: Text('전체 삭제'),
-                        margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                      ),
+                      TextButton(style: TextButton.styleFrom( primary: Colors.black,),onPressed: (){}, child: Text('최근검색어'),),
+                      TextButton(style: TextButton.styleFrom( primary: Colors.black,),onPressed: (){}, child: Text('전체삭'),),
 
               ],),
             ),
@@ -94,7 +87,12 @@ class Search extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Image.asset('asset/img/s_search.jpg', height: 40,),
-                      Text('검색어'),
+                      TextButton(style: TextButton.styleFrom( primary: Colors.black,),onPressed: (){
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Result2();
+                          }),);
+                      }, child: Text('안녕하세요'),),
                       Spacer(flex: 1,),
                       Text('05.23'),
                       Image.asset('asset/img/cross.jpg', height: 40,),
@@ -106,7 +104,12 @@ class Search extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Image.asset('asset/img/s_search.jpg', height: 40,),
-                      Text('검색어2'),
+                      TextButton(style: TextButton.styleFrom( primary: Colors.black,),onPressed: (){
+                        Navigator.push(context,
+                          MaterialPageRoute<void>(builder: (BuildContext context) {
+                            return Result3();
+                          }),);
+                      }, child: Text('예시입니다'),),
                       Spacer(flex: 1,),
                       Text('05.23'),
                       Image.asset('asset/img/cross.jpg', height: 40,),
